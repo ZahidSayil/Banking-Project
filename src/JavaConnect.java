@@ -12,7 +12,7 @@ public static Connection connect(){
     
     try {
         Class.forName("org.sqlite.JDBC");
-        Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Mohammad Zahid\\Documents\\NetBeansProjects\\BankingProject\\Bank.db");
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\noorw\\Documents\\Banking-Project\\Bank.db");
         return conn;
         
        
