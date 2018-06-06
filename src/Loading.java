@@ -44,17 +44,17 @@ public class Loading extends javax.swing.JFrame implements Runnable {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 102));
+        jPanel1.setBackground(new java.awt.Color(218, 165, 32));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Loading Page", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(0, 0, 153)))); // NOI18N
 
-        jLabel3.setBackground(new java.awt.Color(153, 153, 255));
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 153, 102));
         jLabel3.setText("S&S Bank Managment System");
 
         jProgressBar1.setStringPainted(true);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mohammad Zahid\\Documents\\NetBeansProjects\\BankingProject\\images\\loading.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\noorw\\Documents\\Banking-Project\\images\\loading.png")); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Redirecting...");

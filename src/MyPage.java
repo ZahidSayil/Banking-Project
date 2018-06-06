@@ -1428,17 +1428,17 @@ public class MyPage extends javax.swing.JFrame {
         try {
             int balance = Integer.parseInt(balanceTF.getText());
             int transferbal = Integer.parseInt(TransfrAmntTF.getText());
-            if (balanceTF.getText() == null) {
+            if (balance == 0 ) {
                 JOptionPane.showMessageDialog(null, "You don't have sufficient balance for this transcation.");
             } else if (transferbal > balance) {
                 JOptionPane.showMessageDialog(null, "You don't have sufficient balance for this transcation.");
-            } else {
+            }  else {
                 String a1 = TransfrAmntTF.getText();
                 String a2 = CrdtAmntTF.getText();
                 int sum = Integer.parseInt(a1) + Integer.parseInt(a2);
                 String afterTransfer = String.valueOf(sum);
                 CreditTotalTF.setText(afterTransfer);
-
+            
             }
 
         } catch (Exception e) {
@@ -1453,7 +1453,7 @@ public class MyPage extends javax.swing.JFrame {
             String value2 = CreditTotalTF.getText();
             String value3 = jTextField23.getText();
 
-            String sql = "update Balances set Balance='" + value2 + "',LastName='" + value3 + "' where Acc_No='" + value1 + "'";
+            String sql = "update Balances set Balance='" + value2 + "',FirstName='"+ value3+"' where Acc_No='" + value1 + "'";
             pst = conn.prepareStatement(sql);
             pst.execute();
             JOptionPane.showMessageDialog(null, "Sucessfully Transfered");
@@ -1508,17 +1508,26 @@ public class MyPage extends javax.swing.JFrame {
     private void TotalinTransfrBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalinTransfrBTNActionPerformed
 
         try {
+            int balance = Integer.parseInt(balanceTF.getText());
+            int transferbal = Integer.parseInt(TransfrAmntTF.getText());
+            if (balanceTF.getText() == null) {
+                JOptionPane.showMessageDialog(null, "You don't have sufficient balance for this transcation.");
+            } else if (transferbal > balance) {
+                JOptionPane.showMessageDialog(null, "You don't have sufficient balance for this transcation.");
+            } else {
             String a1 = balanceTF.getText();
             String a2 = TransfrAmntTF.getText();
             int transfer = Integer.parseInt(a1) - Integer.parseInt(a2);
             String afterTransfer = String.valueOf(transfer);
             TotalTF.setText(afterTransfer);
-
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
+        
     }//GEN-LAST:event_TotalinTransfrBTNActionPerformed
-
+    
+    
     //Serach button in Transfer Tab
     private void TransferSerachBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TransferSerachBTNActionPerformed
         try {
